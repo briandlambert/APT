@@ -1,0 +1,93 @@
+
+<div id="notificationArea">
+  <!--
+  <div *ngFor="let notification of notifications" class="alert" [ngClass]="{'alert-info': notification.nt===1, 'alert-success': notification.nt===2, 'alert-warning': notification.nt===3, 'alert-danger': notification.nt===4}">
+    <div class="container-fluid">
+    <div class="alert-icon">
+    <i *ngIf="notification.nt===1" class="material-icons">info_outline</i>
+    <i *ngIf="notification.nt===2" class="material-icons">check</i>
+    <i *ngIf="notification.nt===3" class="material-icons">warning</i>
+    <i *ngIf="notification.nt===4" class="material-icons">error_outline</i>
+    </div>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true"><i class="material-icons">clear</i></span>
+    </button>
+    <b *ngIf="notification.nt===1">Info alert:</b>
+    <b *ngIf="notification.nt===2">Success alert:</b>
+    <b *ngIf="notification.nt===3">Warning alert:</b>
+    <b *ngIf="notification.nt===4">Error alert:</b> {{notification.title}}
+    </div>
+  </div>
+  -->
+<!--
+  <ng-container *ngFor="let notification of notifications">
+    <div class="notification notification-info" *ngIf="notification.nt===1">
+        <div class="container-fluid">
+    	  <div class="alert-icon">
+    		<i class="material-icons">info_outline</i>
+    	  </div>
+    	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    		<span aria-hidden="true"><i class="material-icons">clear</i></span>
+    	  </button>
+    	  <b>Info alert:</b> {{notification.title}}
+        </div>
+    </div>
+
+    <div class="alert alert-success" *ngIf="notification.nt===2">
+        <div class="container-fluid">
+    	  <div class="alert-icon">
+    		<i class="material-icons">check</i>
+    	  </div>
+    	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    		<span aria-hidden="true"><i class="material-icons">clear</i></span>
+    	  </button>
+    	  <b>Success alert:</b> {{notification.title}}
+        </div>
+    </div>
+
+    <div class="alert alert-warning" *ngIf="notification.nt===3">
+        <div class="container-fluid">
+    	  <div class="alert-icon">
+    		<i class="material-icons">warning</i>
+    	  </div>
+    	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    		<span aria-hidden="true"><i class="material-icons">clear</i></span>
+    	  </button>
+    	  <b>Warning alert:</b> {{notification.title}}
+        </div>
+    </div>
+
+    <div class="alert alert-danger" *ngIf="notification.nt===4">
+        <div class="container-fluid">
+    	  <div class="alert-icon">
+    		<i class="material-icons">error_outline</i>
+    	  </div>
+    	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    		<span aria-hidden="true"><i class="material-icons">clear</i></span>
+    	  </button>
+    	  <b>Error alert:</b> {{notification.title}}
+        </div>
+    </div>
+  </ng-container>
+-->
+  <notification *ngFor="let not of notifications" [not]="not"></notification>
+  <!--
+  <notification *ngFor="let not of notifications" class="notification" [ngClass]="{'notification-info': not.nt===1, 'notification-success': not.nt===2, 'notification-warning': not.nt===3, 'notification-danger': not.nt===4}">
+    <div class="container-fluid">
+      <div class="alert-icon">
+        <i *ngIf="not.nt===1" class="material-icons">info_outline</i>
+        <i *ngIf="not.nt===2" class="material-icons">check</i>
+        <i *ngIf="not.nt===3" class="material-icons">warning</i>
+        <i *ngIf="not.nt===4" class="material-icons">error_outline</i>
+      </div>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true"><i class="material-icons">clear</i></span>
+      </button>
+      <b *ngIf="not.nt===1">Info alert:</b>
+      <b *ngIf="not.nt===2">Success alert:</b>
+      <b *ngIf="not.nt===3">Warning alert:</b>
+      <b *ngIf="not.nt===4">Error alert:</b> {{not.title}}
+    </div>
+  </notification>
+-->
+</div>
