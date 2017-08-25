@@ -7,8 +7,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './admin/settings/settings.component';
-import { EquipmentService } from './admin/search/equipment.service';
-import { SearchComponent } from './admin/search/search.component';
+import { EquipmentService } from './search/equipment.service';
+import { SearchComponent } from './search/search.component';
 import { NotificationService } from './services/notification.service';
 import { NotificationsComponent } from './notifications/notifications.component';
 
