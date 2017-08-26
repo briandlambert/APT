@@ -11,9 +11,13 @@ export class Notification {
   title: string;
   isNew: boolean;
 
-  constructor(nt: number, title: string){
+  constructor(id: number, nt: number, title: string){
     this.title = title;
     this.nt = nt;
     this.isNew = true;
+    this.id = id;
   }
+
+
+
 }

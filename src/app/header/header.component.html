@@ -14,17 +14,17 @@
 
 						<li><a [routerLink]="['/search']"><i class="material-icons">search</i> Search</a></li>
 
-						<li><a [routerLink]="['/search']"><i class="material-icons">group</i> Recent Subscribers</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" ><i class="material-icons">group</i> Recent Subscribers <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a [routerLink]="['/search']">Placeholder</a></li>
+								<li><a href="*">EILEEN VACARRO<div>USI: 310076085383</div><div>TN: 607-336-5628</div></a></li>
+								<li><a href="*">CRAIG BOBROWIECKI<div>USI: 490000023854</div><div>TN: 860-224-3563</div></a></li>
+								<li><a href="*">ROBERT JONES<div>USI: 370002008242</div><div>TN: 425-640-2543</div></a></li>
+							</ul>
+						</li>
 
 						<li><a [routerLink]="['/settings']"><i class="material-icons">settings</i> Settings</a></li>
-        		<li class="dropdown">
-        			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin <b class="caret"></b></a>
-        			<ul class="dropdown-menu">
-					  		<li><a [routerLink]="['/search']"><i class="material-icons">search</i> Search</a></li>
-					      <!--li class="divider"></li>
-				      	<li><a [routerLink]="['/settings']"><i class="material-icons">settings</i> Settings</a></li-->
-        			</ul>
-        		</li>
     		</ul>
     	</div>
 	</div>

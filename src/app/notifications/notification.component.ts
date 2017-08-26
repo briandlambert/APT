@@ -16,11 +16,9 @@ import { NgClass } from '@angular/common';
 })
 export class NotificationComponent {
   @Input() not:Notification;
-  constructor(private notificationService: NotificationService) {
+  constructor(private notificationService: NotificationService) {}
 
-  }
-
-  close(){
+  close(): void{
     this.notificationService.ack(this.not.id);
   }
 

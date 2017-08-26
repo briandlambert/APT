@@ -29,32 +29,7 @@ export class EquipmentService {
       .catch(this.handleError);
   }
 
-  /*
-  delete(id: number): Promise<void> {
-    const url = `${this.equipmentUrl}/${id}`;
-    return this.http.delete(url, {headers: this.headers})
-      .toPromise()
-      .then(() => null)
-      .catch(this.handleError);
-  }
 
-  create(name: string): Promise<Equipment> {
-    return this.http
-      .post(this.equipmentUrl, JSON.stringify({name: name}), {headers: this.headers})
-      .toPromise()
-      .then(res => res.json().data as Equipment)
-      .catch(this.handleError);
-  }
-
-  update(equip: Equipment): Promise<Equipment> {
-    const url = `${this.equipmentUrl}/${equip.id}`;
-    return this.http
-      .put(url, JSON.stringify(equip), {headers: this.headers})
-      .toPromise()
-      .then(() => equip)
-      .catch(this.handleError);
-  }
-  */
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only
     return Promise.reject(error.message || error);
