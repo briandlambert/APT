@@ -4,6 +4,8 @@ import { FormControl, Validators } from '@angular/forms';
 import { Equipment } from './equipment';
 import { EquipmentService } from './equipment.service';
 
+import {Router} from '@angular/router'
+
 @Component({
   selector : 'search',
   templateUrl : './search.component.html'
@@ -34,7 +36,10 @@ export class SearchComponent {
   selected_type: string;
   selected_code: string;
 
+  constructor(private router:Router){}
+
   search(): void {
+    /*
     this.equipments = [
       {id: 1, model:"abc", color:"blue"},
       {id: 2, model:"xyz", color:"yellow"},
@@ -42,6 +47,9 @@ export class SearchComponent {
       {id: 4, model:"9000", color:"red"},
       {id: 5, model:"50.1", color:"white"},
     ];
+    */
+    this.router.navigate(['/details']);
+
   }
 
   reset(): void {

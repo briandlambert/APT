@@ -15,9 +15,10 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { NotificationComponent } from './notifications/notification.component';
 
 import { NotificationFilter } from './notifications/notifications.filter';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
-  declarations : [NotificationFilter, AppComponent, HeaderComponent,HomeComponent,SearchComponent,SettingsComponent, NotificationsComponent, NotificationComponent  ],
+  declarations : [NotificationFilter, AppComponent, HeaderComponent,HomeComponent,SearchComponent,SettingsComponent, NotificationsComponent, NotificationComponent, DetailsComponent  ],
   imports : [ BrowserModule, BrowserAnimationsModule, FormsModule, ReactiveFormsModule, AppRoutingModule ],
   bootstrap : [ AppComponent ],
   providers : [ EquipmentService, NotificationService ]

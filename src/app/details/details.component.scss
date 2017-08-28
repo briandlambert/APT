@@ -1,0 +1,15 @@
+
+dl.inline {
+  dd {
+    display: inline;
+    margin: 0;
+  }
+  dd:after{
+    display: block;
+    content: '';
+  }
+  dt{
+    display: inline-block;
+    min-width: 100px;
+  }
+}

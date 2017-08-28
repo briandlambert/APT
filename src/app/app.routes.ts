@@ -5,11 +5,14 @@ import { HomeComponent }     from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { SettingsComponent } from './admin/settings/settings.component';
 
+import { DetailsComponent } from './details/details.component';
+
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home',  component: HomeComponent },
   { path: 'search', component: SearchComponent },
-  { path: 'settings', component: SettingsComponent }
+  { path: 'settings', component: SettingsComponent },
+  { path: 'details', component: DetailsComponent }
 ];
 
 @NgModule({

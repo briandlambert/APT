@@ -17,7 +17,6 @@ export class NotificationService {
   }
   error(title: string): void {
     this.notifications.push( new Notification(this.guid(), 4, title) );
-    console.log('notification count is: '+this.notifications.length);
   }
 
   guid():number{
@@ -26,8 +25,10 @@ export class NotificationService {
 
   ack(id: number): void{
     this.notifications.filter( f => {
-      if(f.id===id)
+      if(f.id===id){
         f.isNew = false;
+        return;
+      }
     });
   }
 
