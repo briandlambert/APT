@@ -1,7 +1,7 @@
 
 import { Component } from '@angular/core';
 import { Notification, NotificationType } from './notification';
-import { NotificationService } from '../services/notification.service';
+import { NotificationService } from './notification.service';
 import { Subscription } from 'rxjs/Subscription';
 import { NgClass } from '@angular/common';
 import { NotificationComponent } from './notification.component';

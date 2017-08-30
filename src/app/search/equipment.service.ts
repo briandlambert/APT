@@ -1,9 +1,7 @@
 import { Injectable }    from '@angular/core';
 import { Headers, Http } from '@angular/http';
-
-import 'rxjs/add/operator/toPromise';
-
 import { Equipment } from './equipment';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class EquipmentService {
@@ -20,7 +18,6 @@ export class EquipmentService {
                .catch(this.handleError);
   }
 
-
   getEquipment(id: number): Promise<Equipment> {
     const url = `${this.equipmentUrl}/${id}`;
     return this.http.get(url)
@@ -28,7 +25,6 @@ export class EquipmentService {
       .then(response => response.json().data as Equipment)
       .catch(this.handleError);
   }
-
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only

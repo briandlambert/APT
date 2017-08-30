@@ -1,20 +1,44 @@
-.notification-info{
-  background-color: #0ab1fc;
-  color: #ffffff;
-}
-.notification-success{
-  background-color: #55b559;
-  color: #ffffff;
-}
-.notification-warning{
-  background-color: #fbc53c;
-  color: #ffffff;
-}
-.notification-danger{
-  background-color: #f55145;
-  color: #ffffff;
+div.notification{
+  padding: 15px;
+  margin-bottom: 0;
+  border: 1px solid transparent;
+  .notification-icon {
+    display: block;
+    float: left;
+    margin-right: 15px;
+    i {
+      margin-top: -7px;
+      top: 5px;
+      position: relative;
+    }
+  }
+  &.notification-info  {
+    background-color: #0ab1fc;
+    color: #ffffff;
+    .notification-icon>i.material-icons:after { content: 'info_outline'; }
+    b:before { content: 'Info alert:'; }
+  }
+  &.notification-success  {
+    background-color: #55b559;
+    color: #ffffff;
+    .notification-icon>i.material-icons:after { content: 'check'; }
+    b:before { content: 'Success alert:'; }
+  }
+  &.notification-warning  {
+    background-color: #fbc53c;
+    color: #ffffff;
+    .notification-icon>i.material-icons:after { content: 'warning'; }
+    b:before { content: 'Warning alert:'; }
+  }
+  &.notification-danger  {
+    background-color: #f55145;
+    color: #ffffff;
+    .notification-icon>i.material-icons:after { content: 'error_outline'; }
+    b:before { content: 'Error alert:'; }
+  }
 }
 
+//Fade in
 @-webkit-keyframes fadeIn {
   0% {opacity: 0;}
   100% {opacity: 1;}
@@ -31,21 +55,4 @@
   animation-duration: .3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-}
-
-.notification {
-  padding: 15px;
-  margin-bottom: 0;
-  border: 1px solid transparent;
-  //border-radius: 4px;
-  .notification-icon {
-    display: block;
-    float: left;
-    margin-right: 15px;
-    i {
-      margin-top: -7px;
-      top: 5px;
-      position: relative;
-    }
-  }
 }

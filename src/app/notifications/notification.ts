@@ -7,17 +7,14 @@ export enum NotificationType {
 
 export class Notification {
   id: number;
-  nt: NotificationType;
+  nt: number;
   title: string;
   isNew: boolean;
 
   constructor(id: number, nt: number, title: string){
-    this.title = title;
-    this.nt = nt;
-    this.isNew = true;
     this.id = id;
+    this.nt = nt;
+    this.title = title;
+    this.isNew = true;
   }
-
-
-
 }

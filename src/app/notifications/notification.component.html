@@ -1,17 +1,11 @@
 <div class="notification" [ngClass]="{'notification-info': not.nt===1, 'notification-success': not.nt===2, 'notification-warning': not.nt===3, 'notification-danger': not.nt===4}">
   <div class="container-fluid">
     <div class="notification-icon">
-      <i *ngIf="not.nt===1" class="material-icons">info_outline</i>
-      <i *ngIf="not.nt===2" class="material-icons">check</i>
-      <i *ngIf="not.nt===3" class="material-icons">warning</i>
-      <i *ngIf="not.nt===4" class="material-icons">error_outline</i>
+      <i class="material-icons"></i>
     </div>
     <button type="button" class="close" aria-label="Close" (click)="close()">
       <span aria-hidden="true"><i class="material-icons">clear</i></span>
     </button>
-    <b *ngIf="not.nt===1">Info alert:</b>
-    <b *ngIf="not.nt===2">Success alert:</b>
-    <b *ngIf="not.nt===3">Warning alert:</b>
-    <b *ngIf="not.nt===4">Error alert:</b> {{not.title}}
+    <b></b> {{not.title}}
   </div>
 </div>

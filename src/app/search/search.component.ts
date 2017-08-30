@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-
-import { Equipment } from './equipment';
-import { EquipmentService } from './equipment.service';
-
 import {Router} from '@angular/router'
 
 @Component({
   selector : 'search',
-  templateUrl : './search.component.html'
+  templateUrl : './search.component.html',
+  styleUrls: ['./search.component.scss']
 })
 export class SearchComponent {
 
@@ -27,36 +24,28 @@ export class SearchComponent {
     {name: 'Call Features',value: 'CFEATURES'}
   ];
 
-
-  equipments: Array<Equipment> = [];
-
-  envSelector = new FormControl('', Validators.required);
-
+  selected_usi: string;
+  selected_tn: string;
+  selected_so: string;
   selected_env: string;
   selected_type: string;
   selected_code: string;
+  isAdmin: boolean = true;
 
   constructor(private router:Router){}
 
   search(): void {
-    /*
-    this.equipments = [
-      {id: 1, model:"abc", color:"blue"},
-      {id: 2, model:"xyz", color:"yellow"},
-      {id: 3, model:"123", color:"green"},
-      {id: 4, model:"9000", color:"red"},
-      {id: 5, model:"50.1", color:"white"},
-    ];
-    */
     this.router.navigate(['/details']);
-
   }
 
   reset(): void {
+    this.selected_usi = '';
+    this.selected_tn = '';
+    this.selected_so = '';
     this.selected_env = '';
     this.selected_type = '';
     this.selected_code = '';
-    this.equipments.length = 0;
+    this.isAdmin = !this.isAdmin;
   }
 
 

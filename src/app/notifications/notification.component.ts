@@ -1,12 +1,8 @@
 
 import { Component, Input } from '@angular/core';
 import { Notification, NotificationType } from './notification';
-import { NotificationService } from '../services/notification.service';
-//import { Subscription } from 'rxjs/Subscription';
-
+import { NotificationService } from './notification.service';
 import { NgClass } from '@angular/common';
-
-
 
 @Component({
   selector : 'notification',
@@ -16,7 +12,8 @@ import { NgClass } from '@angular/common';
 })
 export class NotificationComponent {
   @Input() not:Notification;
-  constructor(private notificationService: NotificationService) {}
+
+  constructor(private notificationService: NotificationService){}
 
   close(): void{
     this.notificationService.ack(this.not.id);

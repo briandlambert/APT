@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'home',  component: HomeComponent },
   { path: 'search', component: SearchComponent },
   { path: 'settings', component: SettingsComponent },
-  { path: 'details', component: DetailsComponent }
+  { path: 'details/:SubscriberId', component: DetailsComponent }
 ];
 
 @NgModule({

@@ -1,0 +1,35 @@
+@mixin rounded($radius: 2px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+.card {
+  padding: 15px;
+}
+
+.flex-search {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center | stretch;
+
+  div {
+    flex-grow: 1;
+  }
+  .or {
+    min-width: 50px;
+    max-width: 150px;
+    align-self: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+
+.fab {
+  @include rounded(50%);
+  background-color: #465184;
+  color: white;
+  padding: 8px;
+}
